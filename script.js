@@ -5,12 +5,28 @@ const circles = document.querySelectorAll('.circle')
 
 let currentActive = 1
 
-next.addEventListener('click',() => {
+next.addEventListener('click', () => {
     currentActive++
 
-    if(currentActive . circles.length){
+    if (currentActive.circles.length) {
         currentActive = circles.length
     }
 
-    
+    update()
 })
+
+prev.addEventListener('click', () => {
+    currentActive--
+
+    if (currentActive < 1) {
+        currentActive = 1
+    }
+
+    update()
+})
+
+function update() {
+    circles.forEach(() => {
+
+    })
+}
